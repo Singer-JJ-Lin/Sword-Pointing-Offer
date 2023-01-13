@@ -9,11 +9,9 @@ func reverseLeftWords(s string, n int) string {
 }
 
 func reverse(s []byte, l, r int) {
-	for l < r {
+	for ; l < r; l, r = l+1, r-1 {
 		temp := s[l]
 		s[l] = s[r]
 		s[r] = temp
-		l++
-		r--
 	}
 }
