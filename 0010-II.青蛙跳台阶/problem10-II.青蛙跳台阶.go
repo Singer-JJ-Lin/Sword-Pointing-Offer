@@ -1,4 +1,4 @@
-package problem10_II_青蛙跳台阶
+package _010_II_青蛙跳台阶
 
 const mod int = 1e9 + 7
 
