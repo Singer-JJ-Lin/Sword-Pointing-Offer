@@ -10,12 +10,13 @@ dp[i][j]代表了从左上角走到当前位置{i,j}可以获得礼物的最大�
 4. i != 0, j != 0, 可从左边或上边到达
 
 $$
-dp[i][j] = \left\{  
+dp[i][j] = 
+\left\{  
 \begin{array}{**lr**}  
 grid[i][j], & i = 0, j = 0 \\  
 grid[i][j]+dp[i][j-1], & i=0,j \neq 0.\\  
 grid[i][j] + dp[i-1][j], & i \neq 0, j = 0 \\
-grid[i][j] + max(dp[i-1][j], dp[i]dp[j-1]) & i \neq 0, j \neq 0
+grid[i][j] + max(dp[i-1][j], dp[i][j-1]) & i \neq 0, j \neq 0
 \end{array}  
 \right.
 $$
