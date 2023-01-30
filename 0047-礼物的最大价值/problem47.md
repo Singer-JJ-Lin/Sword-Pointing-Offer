@@ -25,4 +25,5 @@ grid[i][j] + max(dp[i-1][j], dp[i][j-1]) & i \neq 0, j \neq 0
 $$
 
 
- 
+### 空间复杂度优化
+由于dp[i][j]只与dp[i-1][j]、dp[i][j-1]和grid[i][j]有关，所以可以将grid当作dp数组来用
